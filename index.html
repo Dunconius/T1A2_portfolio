@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <!-- JS script for reuse of navblock -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <link rel="stylesheet" href="./style.css">
+    
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,100&display=swap" rel="stylesheet"> -->
+
+</head>
+<body>
+
+<!--Nav bar block, using jscript to ducplicate across pages-->
+<div id="nav-placeholder"></div>
+<script>
+    $(function(){
+    $("#nav-placeholder").load("./components/nav.html");
+    });
+</script>
+<!--end of Navigation bar-->
+
+<!-- main content -->
+<section class="div-main">
+    <h1>Henlo</h1>
+    <p>I am a budding web developer, eager to dive into the world of creating amazing online experiences. With a hunger for learning and a keen eye for detail, I'm here to share the web projects I've been working on as I grow my skills.</p>
+</section>
+
+</body>
+</html>

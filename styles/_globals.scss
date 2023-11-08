@@ -1,0 +1,19 @@
+// style colour swatches
+$col-bg: #cccccc;
+$col-blk: black;
+$col-feat1: #ff3d79;
+$col-feat2: #0095ff;
+$col-wht: white;
+$col-shadow: #a3a3a3;
+
+// Roboto google font import
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,100&display=swap');
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: $col-bg;
+    padding: 15px 15px 0px ;
+}
