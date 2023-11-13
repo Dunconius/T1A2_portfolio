@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
-    <link rel="stylesheet" href="./style.css">
-    
-    <!-- JS script for reuse of navblock -->
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HomePage</title>
+        <link rel="stylesheet" href="./styles/pages/home.css">
         
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,100&display=swap" rel="stylesheet"> -->
+        <!-- JS script for reuse of navblock -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+ 
+    </head>
+    
+    <body>
+        <!--Nav bar block, using jscript to ducplicate across pages-->
+        <div id="nav-placeholder"></div>
+        <script>
+            $(function(){
+            $("#nav-placeholder").load("./components/nav.html");
+            });
+        </script>
+        <!--end of Navigation bar-->
 
-</head>
-<body>
+        <!-- main content -->
+        <main>
+            <div>
+                <div>
+                    <h1 id="big-title">Henlo</h1>
+                </div>
+                <div style="background-color:rgb(176, 230, 185);">
+                    <p>I am Duncan.</p>
+                    <p>Developer. Designer. Derp.</p>
+                </div>
+            </div>
+        </main>
 
-<!--Nav bar block, using jscript to ducplicate across pages-->
-<div id="nav-placeholder"></div>
-<script>
-    $(function(){
-    $("#nav-placeholder").load("./components/nav.html");
-    });
-</script>
-<!--end of Navigation bar-->
-
-<!-- main content -->
-<section class="div-main">
-    <div class="div-home">
-        <div style="background-color:powderblue;">
-            <h1 id="big-title">Henlo</h1>
-        </div>
-        <div style="background-color:rgb(176, 230, 185);">
-            <p>I am Duncan.</p>
-            <p>Developer. Designer. Derp.</p>
-        </div>
-    </div>
-</section>
-
-</body>
+    </body>
 </html>
