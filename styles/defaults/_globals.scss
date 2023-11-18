@@ -12,6 +12,7 @@
     filter: drop-shadow(-7px 7px 1px $col-shadow);
 }
 
+// reusable styling for most buttons
 @mixin button-style {
     background-color: $col-wht;
     border: none;
@@ -73,6 +74,7 @@ a {
 
 p {
     font-size: 16px;
+    text-align: justify;
 }
 
 // global element styles
@@ -89,10 +91,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 1200px;
     margin: 10px;
     width: 100%;
-    // background-image: linear-gradient(rgb(255, 255, 255), rgb(77, 77, 77));
 }
 
 figure {
@@ -100,12 +100,10 @@ figure {
 }
 
 
-
+// breakpoint styling. Restricts size of main content for large screens
 @media screen and (min-width: $medium) {
     main {
         max-width: 900px;
-        
     }
-    
 }
 

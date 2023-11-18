@@ -4,6 +4,7 @@ h2 {
     margin: 0px 0px 20px 0px;
 }
 
+// contact form styling
 main {
     div {
         width: 100%;
@@ -44,9 +45,6 @@ main {
                     outline: none;
                     font-size: 1.2rem;
                     margin-top: 2px;
-                    
-                    
-                    
 
                     &#form-message {
                         height: 100px;
@@ -59,7 +57,6 @@ main {
                     &:focus {
                         box-shadow: 0 0 10px 3px $col-wht;
                     }
-        
                 }
             }
         }
@@ -77,8 +74,6 @@ main {
     div {
         width: auto;
         padding: 10px;
-        // background-color: $col-shadow;
-        // border-radius: 500px;
     }
 }
 
@@ -88,6 +83,7 @@ main {
     @include dropshadow;
 }
 
+// breakpoint styling
 @media screen and (min-width: $medium) {
     main {
         div {
@@ -110,9 +106,7 @@ main {
         }
         .contactdetails {
             flex-wrap: wrap;
-
         }
-        
     }
 }
 
@@ -124,9 +118,7 @@ main {
     border-radius: 900px;
     display: flex;
     justify-content: center;
-    // align-items: center;
     margin-top: 50px;
-    // @include button-style;
     @include button-text;
 }
 

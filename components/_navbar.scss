@@ -1,5 +1,6 @@
 @import "../styles/defaults/colors";
 
+// navigation bar / header styling
 .navbar {
     position: fixed;
     z-index:999;
@@ -48,6 +49,7 @@
     @include dropshadow;
 }
 
+// breakpoint styling for navbar
 @media screen and (min-width: $medium) {
     .navbar {
         .navlinkblock {
@@ -72,8 +74,6 @@
     .navlink-image {
         display: none;
     }
-
-    
 
     .navlink-image:hover {
         // background-color: $col-feat1;
