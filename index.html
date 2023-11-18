@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HomePage</title>
-        <link rel="stylesheet" href="./styles/pages/home.css">
-        
-        <!-- JS script for reuse of navblock -->
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
- 
-    </head>
-    
-    <body>
-        <!--Nav bar block, using jscript to ducplicate across pages-->
-        <div id="nav-placeholder"></div>
-        <script>
-            $(function(){
-            $("#nav-placeholder").load("./components/nav.html");
-            });
-        </script>
-        <!--end of Navigation bar-->
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>About</title>
+      <!-- JS script for reuse of navblock -->
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      
+      <link rel="stylesheet" href="../styles/pages/home.css">
+      
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,100&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+    <!--Nav bar block, using jscript to ducplicate across pages-->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function(){
+        $("#nav-placeholder").load("./components/navbar.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
 
-        <!-- main content -->
-        <main>
-            <div class="div-home">
-                <div id="home-left">
-                    <h1 id="big-title">Henlo</h1>
-                </div>
-                <div style="background-color:rgb(176, 230, 185);">
-                    <p>I am Duncan.</p>
-                    <p>Developer. Designer. Derp.</p>
-                </div>
-            </div>
-        </main>
+    <!-- main content -->
+    <main>
+      <div>
+          <h1 id="big-title">Henlo</h1>
+          <p>I am Duncan.</p>
+          <p>Developer. Designer. Derp.</p>
+      </div>
+      <a href="./pages/about.html">
+        <button>
+        Find out more
+      </button>
+      </a>
+      
+      
+  </main>
 
-    </body>
+
+    <!--Footer block, using jscript to ducplicate across pages-->
+    <div id="foot-placeholder"></div>
+    <script>
+        $(function(){
+        $("#foot-placeholder").load("./components/footer.html");
+        });
+    </script>
+    <!--end of Footer -->  
+  </body>
 </html>

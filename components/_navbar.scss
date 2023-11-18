@@ -1,0 +1,84 @@
+@import "../styles/defaults/colors";
+
+.navbar {
+    position: fixed;
+    z-index:999;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: $col-wht;
+    .logo {
+        height: 70px;
+        width: 70px;
+        border-radius: 50px;
+        background-color: $col-feat1;
+        @include dropshadow;
+    }
+    .navlinkblock {
+        width: auto;
+        background-color: $col-bg;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: -20px;
+        border-radius: 500px 0px 0px 500px;
+        .navlink {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            background-color: $col-feat1;
+            margin: 00px 10px;
+        }
+    }
+}
+
+.navlink-text {
+    display: none;
+}
+
+.navlink:hover {
+    background-color: $col-feat1 !important;
+    color: $col-wht !important;
+    transition: 0.3s ease-in-out;
+    @include dropshadow;
+}
+
+@media screen and (min-width: $medium) {
+    .navbar {
+        .navlinkblock {
+            // width: 70%;
+            .navlink {
+                background-color: $col-wht;
+                width: 150px;
+                padding-left: 20px;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                background-color: $col-wht;
+                @include button-text;
+            }
+        }
+        
+    }
+    
+    .navlink-text {
+        display: block;
+    }
+    .navlink-image {
+        display: none;
+    }
+
+    
+
+    .navlink-image:hover {
+        // background-color: $col-feat1;
+        // color: $col-wht;
+        transition: 0.3s ease-in-out;
+        @include dropshadow;
+    }
+}

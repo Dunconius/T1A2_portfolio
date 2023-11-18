@@ -1,40 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
-    <!-- JS script for reuse of navblock -->
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About</title>
+        <!-- JS script for reuse of navblock -->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        
+        <link rel="stylesheet" href="../styles/pages/contact.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    </head>
+
+    <body>
+        <!--Nav bar block, using jscript to ducplicate across pages-->
+        <div id="nav-placeholder"></div>
+        <script>
+            $(function(){
+            $("#nav-placeholder").load("../components/navbar.html");
+            });
+        </script>
+        <!--end of Navigation bar-->
+
+        <main>
+            <div>
+                <h2>Get in touch</h2>
+                <form>                
+                    <div class="form-elements">
+                        <label>Name:</label>
+                        <input class="form-input">
+                    </div>
     
-    <link rel="stylesheet" href="../style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,100&display=swap" rel="stylesheet">
+                    <div class="form-elements">
+                        <label>Email:</label>
+                        <input class="form-input">
+                    </div>
+                    
+                    <div class="form-elements">
+                        <label>Message:</label>
+                        <textarea class="form-input" id="form-message" rows="3">
+                        </textarea>
+                    </div>
+                    
+                    <div class="btn-div">
+                        <button id="submit">Submit</button>
+                    </div>
+                </form>   
+            </div>
 
-</head>
-<body>
+            <div class="resume">
+                <a href="../images/Duncan Bean CV_2023.pdf" download>Download my CV</a>
+            </div>
+            <div class="contactdetails">
+                <div class="phone">
+                    ph: 1264 378 465
+                </div>
+                <div class="email">
+                    <a href="mailto:email@email.com">email@email.com</a>
+                    
+                </div>
+            </div>
+        </main>
 
-<!--Nav bar block, using jscript to ducplicate across pages-->
-<div id="nav-placeholder"></div>
-<script>
-    $(function(){
-     $("#nav-placeholder").load("../components/nav.html");
-    });
-</script>
-<!--end of Navigation bar-->
-
-<!-- main content -->
-<section class="div-main">
-    <div id="contact">
-        <div class="photo"></div>
-        <div class="aboutblurb">
-            <h1 class="med-title">CONTACT PAGE:</h1>
-            <p class="blurb">I am a budding web developer, eager to dive into the world of creating amazing online experiences. With a hunger for learning and a keen eye for detail, I'm here to share the web projects I've been working on as I grow my skills.</p>
-        </div>
-    </div>
-</section>
-
-</body>
+        <!--Footer block, using jscript to ducplicate across pages-->
+        <div id="foot-placeholder"></div>
+        <script>
+            $(function(){
+            $("#foot-placeholder").load("../components/footer.html");
+            });
+        </script>
+        <!--end of Footer -->
+    </body>
 </html>

@@ -1,0 +1,92 @@
+@import "../../index";
+
+// accordion code
+.accordion {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .accordion__label,
+  .accordion__content {
+    background: $col-feat1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px $col-shadow;
+    padding: 5px;
+  }
+  
+  .accordion__label {
+    display: block;
+    color: $col-wht;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    font-style: italic;
+    margin: 10px 0px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.1s;
+  }
+  
+  .accordion__label:hover {
+    background: $col-feat2;
+  }
+  
+  .accordion__label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 12px;
+    height: 6px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+    background-size: contain;
+    transition: transform 0.4s;
+  }
+  
+  .accordion__content {
+    background: #ffffff;
+    line-height: 1.6;
+    font-size: 0.85em;
+    display: none;
+  }
+  
+  .accordion__input {
+    display: none;
+  }
+  
+  .accordion__input:checked ~ .accordion__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .accordion__input:checked ~ .accordion__label::after {
+    transform: translateY(-50%) rotate(0.5turn);
+  }
+
+.accordion-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: $col-shadow;
+    
+}
+
+.blog-content {
+    text-align: justify;
+}
+
+@media screen and (min-width: $medium) {
+    .accordion-text {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
