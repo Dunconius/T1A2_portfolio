@@ -1,5 +1,9 @@
 @import "../../index";
 
+h2 {
+  align-self: flex-start;
+}
+
 // accordion styling
 .accordion {
     overflow: hidden;
@@ -73,16 +77,18 @@
 
 .blog-image {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     background-color: $col-shadow;
-    
 }
 
-// breakpoint styling
+
+// breakpoint styling R4
 @media screen and (min-width: $medium) {
-    .accordion-text {
-        display: flex;
-        flex-wrap: wrap;
-    }
+  .blog-image {
+    width: 400px;
+    height: 400px;
+    float: right;
+    margin: 15px 00px 20px 30px;
+  }
 }

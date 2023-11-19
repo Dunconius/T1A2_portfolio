@@ -100,7 +100,7 @@ figure {
 }
 
 
-// breakpoint styling. Restricts size of main content for large screens
+// breakpoint styling R4. Restricts size of main content for large screens
 @media screen and (min-width: $medium) {
     main {
         max-width: 900px;
